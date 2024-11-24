@@ -12,9 +12,9 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd-practice-prod
+  syncPolicy:
     syncOptions:
     - CreateNamespace=true
-  syncPolicy:
     automated:
       selfHeal: true
       prune: true
