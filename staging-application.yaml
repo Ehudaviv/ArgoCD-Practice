@@ -8,13 +8,13 @@ spec:
   source:
     repoURL: https://github.com/Ehudaviv/ArgoCD-Practice.git
     targetRevision: HEAD
-    path: Practice-Manifests
+    path: Practice-Manifests/Staging
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd-practice
-  syncPolicy:
+    namespace: argocd-practice-staging
     syncOptions:
     - CreateNamespace=true
+  syncPolicy:
     automated:
       selfHeal: true
       prune: true
